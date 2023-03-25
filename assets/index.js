@@ -41,7 +41,7 @@ inquirer
     {
       type: "list",
       maeesage: "What license do you want to add to your repository?",
-      choices: ["MIT", "GPLv2", "Apache"],
+      choices: ["MIT", "GPLv2", "Apache", "None"],
       name: "license",
     },
     {
@@ -102,6 +102,7 @@ const genericREADMEanswers = ({
 
   ## Tests
   ${test}
+
   ## Questions
   If you have any questions please feel free to reach out:
   ${GitHub}
@@ -109,6 +110,13 @@ const genericREADMEanswers = ({
 
   ## License
   ${license}`;
+
+  function renderLicenseBadge(license) {
+    if (license !== 'None') {
+      return `![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)`;
+    }
+    return '';
+  }
 
 // function init() {}
 
