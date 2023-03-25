@@ -80,43 +80,43 @@ const genericREADMEanswers = ({
 }) =>
   `# ${title}
 
-  ## Description
-  ${description}
+## Description
+${description}
   
-  ## Table of Contents
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Contribute](#how-to-contribute)
-  - [Tests](#tests)
-  - [Questions](#questions)
-  - [License](#license)
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contribute](#how-to-contribute)
+- [Tests](#tests)
+- [Questions](#questions)
+- [License](#license)
   
-  ## Installation
-  ${installation}
+## Installation
+${installation}
 
-  ## Usage
-  ${usage}
+## Usage
+${usage}
 
-  ## How to Contribute
-  ${contribute}
+## How to Contribute
+${contribute}
 
-  ## Tests
-  ${test}
+## Tests
+${test}
 
-  ## Questions
-  If you have any questions please feel free to reach out:
-  ${GitHub}
-  ${email}
+## Questions
+If you have any questions please feel free to reach out:
+${GitHub}
+${email}
 
-  ## License
-  ${license}`;
+## License
+${license}`;
 
-  function renderLicenseBadge(license) {
-    if (license !== 'None') {
-      return `![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)`;
-    }
-    return '';
+function renderLicenseBadge(license) {
+  if (license !== "None") {
+    return `![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)`;
   }
+  return "";
+}
 
 // function init() {}
 
