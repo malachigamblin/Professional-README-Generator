@@ -65,9 +65,52 @@ inquirer
         ? console.log(err)
         : console.log("Your README file has been generated!")
     );
-  })
-// TODO: Create a function to initialize app
-function init() {}
+  });
+// 3. generate README
+const genericREADMEanswers = ({
+  title,
+  description,
+  installation,
+  usage,
+  contribute,
+  test,
+  license,
+  GitHub,
+  email,
+}) =>
+  `# ${title}
 
-// Function call to initialize app
-init();
+  ## Description
+  ${description}
+  
+  ## Table of Contents
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Contribute](#how-to-contribute)
+  - [Tests](#tests)
+  - [Questions](#questions)
+  - [License](#license)
+  
+  ## Installation
+  ${installation}
+
+  ## Usage
+  ${usage}
+
+  ## How to Contribute
+  ${contribute}
+
+  ## Tests
+  ${test}
+  ## Questions
+  If you have any questions please feel free to reach out:
+  ${GitHub}
+  ${email}
+
+  ## License
+  ${license}`;
+
+// function init() {}
+
+// // Function call to initialize app
+// init();
