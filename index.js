@@ -27,7 +27,7 @@ inquirer
     },
     {
       type: "input",
-      message: "What are the contribution guidlines?",
+      message: "What are the contribution guidelines?",
       name: "contributing",
     },
     {
@@ -51,7 +51,6 @@ inquirer
       message: "What is your email address?",
       name: "email",
     },
-
   ])
   // TODO: Create a function to write README file
   .then((answers) => {
@@ -63,48 +62,46 @@ inquirer
     );
   });
 
-  const genericREADMEanswers = ({
-    title,
-    description,
-    installation,
-    usage,
-    contributing,
-    test,
-    license,
-    GitHub,
-    email,
-  }) =>
-    `# ${title}
+const genericREADMEanswers = ({
+  title,
+  description,
+  installation,
+  usage,
+  contributing,
+  test,
+  license,
+  GitHub,
+  email,
+}) =>
+  `# ${title}
   
-  ## Description
-  ${description}
-    
-  ## Table of Contents
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Contribute](#contributing)
-  - [Tests](#tests)
-  - [Questions](#questions)
-  - [License](#license)
-    
-  ## Installation
-  ${installation}
-  
-  ## Usage
-  ${usage}
-  
-  ## Contributing
-  ${contributing}
-  
-  ## Tests
-  ${test}
-  
-  ## Questions
-  For questions about this project, please see my GitHub at [${GitHub}](https://github.com/${GitHub}/). 
-  You can also reach me by email at ${email}.
-  
-  ## License
-  [![License: ${license}](https://img.shields.io/badge/License-${license}-yellow.svg)](https://opensource.org/licenses/${license})
-  This project is licensed under the ${license} license.`;
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contribute](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
+- [License](#license)
 
+## Description
+${description}
+    
+## Installation
+${installation}
   
+## Usage
+${usage}
+  
+## Contributing
+${contributing}
+  
+## Tests
+${test}
+  
+## Questions
+For questions about this project, please see my GitHub at [${GitHub}](https://github.com/${GitHub}/). 
+You can also reach me by email at ${email}.
+  
+## License
+[![License: ${license}](https://img.shields.io/badge/License-${license}-yellow.svg)](https://opensource.org/licenses/${license})
+This project is licensed under the ${license} license.`;
