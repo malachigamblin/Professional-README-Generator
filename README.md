@@ -16,6 +16,11 @@ Install node.js onto computer & install inquirer in code editor using "npm i inq
   
 ## Usage
 After installation is complete, use "node index.js" and follow the prompts to create README.
+
+## Screenshots
+
+<img width="1044" alt="Screenshot 2023-03-25 at 11 17 47 PM" src="https://user-images.githubusercontent.com/118701306/227753344-764d3a39-5854-4726-aaa7-bb5002fe4018.png">
+<img width="1044" alt="Screenshot 2023-03-25 at 11 18 13 PM" src="https://user-images.githubusercontent.com/118701306/227753351-f556f94e-a3f5-4697-8392-037843834fad.png">
   
 ## Contributing
 There are no guidelines for contributing at this time.
