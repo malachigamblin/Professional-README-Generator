@@ -1,58 +1,54 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
+// const generateMarkdown = require("./generateMarkdown");
 // TODO: Create an array of questions for user input
 inquirer
   .prompt([
     {
       type: "input",
-      message: "What is the name of the repository?",
+      message: "What is the name of your project?",
       name: "title",
     },
     {
       type: "input",
-      message:
-        "Provide a short description explaining the what, why, and how of your project.",
+      message: "Enter a brief description of your project",
       name: "description",
     },
     {
       type: "input",
-      message:
-        "What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.",
+      message: "What are the installation instructions?",
       name: "installation",
     },
     {
       type: "input",
-      message:
-        "Provide instructions and examples for use. Include screenshots as needed.",
+      message: "Provide usage inforation.",
       name: "usage",
     },
     {
       type: "input",
-      message:
-        "If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so.",
-      name: "contribute",
+      message: "What are the contribution guidlines?",
+      name: "contributing",
     },
     {
       type: "input",
-      message: "Provide examples on how to run tests.",
+      message: "What are the tests instructions?",
       name: "test",
     },
     {
       type: "list",
       maeesage: "What license do you want to add to your repository?",
-      choices: ["MIT", "GPLv2", "Apache", "None"],
+      choices: ["MIT", "GPLv2", "Apache", "BSD"],
       name: "license",
     },
     {
       type: "input",
-      message:
-        "Provide your GitHub username for any user that may have a question.",
+      message: "What is your GitHub username?",
       name: "GitHub",
     },
     {
       type: "input",
-      message: "Provide your e-mail for any user that may have a question.",
+      message: "What is your email address?",
       name: "email",
     },
     // 2. process the answers
@@ -66,59 +62,56 @@ inquirer
         : console.log("Your README file has been generated!")
     );
   });
-// 3. generate README
-const genericREADMEanswers = ({
-  title,
-  description,
-  installation,
-  usage,
-  contribute,
-  test,
-  license,
-  GitHub,
-  email,
-}) =>
-  `# ${title}
 
-## Description
-${description}
+  const genericREADMEanswers = ({
+    title,
+    description,
+    installation,
+    usage,
+    contributing,
+    test,
+    license,
+    GitHub,
+    email,
+  }) =>
+    `# ${title}
   
-## Table of Contents
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contribute](#how-to-contribute)
-- [Tests](#tests)
-- [Questions](#questions)
-- [License](#license)
+  ## Description
+  ${description}
+    
+  ## Table of Contents
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Contribute](#contributing)
+  - [Tests](#tests)
+  - [Questions](#questions)
+  - [License](#license)
+    
+  ## Installation
+  ${installation}
   
-## Installation
-${installation}
-
-## Usage
-${usage}
-
-## How to Contribute
-${contribute}
-
-## Tests
-${test}
-
-## Questions
-If you have any questions please feel free to reach out:
-${GitHub}
-${email}
-
-## License
-${license}`;
-
-function renderLicenseBadge(license) {
-  if (license !== "None") {
-    return `![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)`;
-  }
-  return "";
-}
-
-// function init() {}
-
-// // Function call to initialize app
-// init();
+  ## Usage
+  ${usage}
+  
+  ## Contributing
+  ${contributing}
+  
+  ## Tests
+  ${test}
+  
+  ## Questions
+  For questions about this project, please see my GitHub at [${GitHub}](https://github.com/${GitHub}/). 
+  You can also reach me by email at ${email}.
+  
+  ## License
+  [![License: ${license}](https://img.shields.io/badge/License-${license}-yellow.svg)](https://opensource.org/licenses/${license})
+  This project is licensed under the ${license} license.`;
+  
+  // function init() {
+  //   inquirer.prompt(questions).then((answers) => {
+  //     const markdown = generateMarkdown(answers);
+  //     writeToFile("README.md", markdown);
+  //   });
+  // }
+  // init();
+  
