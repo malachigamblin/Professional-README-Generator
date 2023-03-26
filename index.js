@@ -1,7 +1,6 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
-// const generateMarkdown = require("./generateMarkdown");
 // TODO: Create an array of questions for user input
 inquirer
   .prompt([
@@ -74,7 +73,9 @@ const genericREADMEanswers = ({
   email,
 }) =>
   `# ${title}
-  
+ 
+[![License: ${license}](https://img.shields.io/badge/License-${license}-yellow.svg)](https://opensource.org/licenses/${license}) 
+
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
@@ -103,5 +104,4 @@ For questions about this project, please see my GitHub at [${GitHub}](https://gi
 You can also reach me by email at ${email}.
   
 ## License
-[![License: ${license}](https://img.shields.io/badge/License-${license}-yellow.svg)](https://opensource.org/licenses/${license})
 This project is licensed under the ${license} license.`;
