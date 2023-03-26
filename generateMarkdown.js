@@ -1,51 +1,20 @@
-// const genericREADMEanswers = ({
-//   title,
-//   description,
-//   installation,
-//   usage,
-//   contributing,
-//   test,
-//   license,
-//   GitHub,
-//   email,
-// }) =>
-//   `# ${title}
+// TODO: Create a function that returns a license badge based on which license is passed in
+// If there is no license, return an empty string
+function renderLicenseBadge(license) {}
 
-// ## Description
-// ${description}
-  
-// ## Table of Contents
-// - [Installation](#installation)
-// - [Usage](#usage)
-// - [Contribute](#contributing)
-// - [Tests](#tests)
-// - [Questions](#questions)
-// - [License](#license)
-  
-// ## Installation
-// ${installation}
+// TODO: Create a function that returns the license link
+// If there is no license, return an empty string
+function renderLicenseLink(license) {}
 
-// ## Usage
-// ${usage}
+// TODO: Create a function that returns the license section of README
+// If there is no license, return an empty string
+function renderLicenseSection(license) {}
 
-// ## Contributing
-// ${contributing}
+// TODO: Create a function to generate markdown for README
+function generateMarkdown(data) {
+  return `# ${data.title}
 
-// ## Tests
-// ${test}
+`;
+}
 
-// ## Questions
-// For questions about this project, please see my GitHub at [${GitHub}](https://github.com/${GitHub}/). 
-// You can also reach me by email at ${email}.
-
-// ## License
-// [![License: ${license}](https://img.shields.io/badge/License-${license}-yellow.svg)](https://opensource.org/licenses/${license})
-// This project is licensed under the ${license} license.`;
-
-// function init() {
-//   inquirer.prompt(questions).then((answers) => {
-//     const markdown = generateMarkdown(answers);
-//     writeToFile("README.md", markdown);
-//   });
-// }
-// init();
+module.exports = generateMarkdown;

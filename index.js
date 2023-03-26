@@ -51,7 +51,7 @@ inquirer
       message: "What is your email address?",
       name: "email",
     },
-    // 2. process the answers
+
   ])
   // TODO: Create a function to write README file
   .then((answers) => {
@@ -106,12 +106,5 @@ inquirer
   ## License
   [![License: ${license}](https://img.shields.io/badge/License-${license}-yellow.svg)](https://opensource.org/licenses/${license})
   This project is licensed under the ${license} license.`;
-  
-  // function init() {
-  //   inquirer.prompt(questions).then((answers) => {
-  //     const markdown = generateMarkdown(answers);
-  //     writeToFile("README.md", markdown);
-  //   });
-  // }
-  // init();
+
   
