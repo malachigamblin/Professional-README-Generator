@@ -5,7 +5,7 @@
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contribute](#contributing)
+- [Contribute](#contribute)
 - [Tests](#tests)
 - [Questions](#questions)
 - [License](#license)
@@ -19,7 +19,7 @@ Install node.js onto your computer in the terminal & install inquirer in your co
 ## Usage
 After installation is complete and this repo is cloned, use "node index.js" and follow the prompts to complete the README.
   
-## Contributing
+## Contribute
 Ther are no guidlines for contributing at this time.
   
 ## Tests
